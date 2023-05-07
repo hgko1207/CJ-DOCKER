@@ -10,13 +10,26 @@
         <Setter Property="BorderBrush" Value="Black"/>
     </Style>
 
-    <Style x:Key="CircleStyle" TargetType="Border">
+    <Style x:Key="CircleStyle" TargetType="Ellipse">
         <Setter Property="Width" Value="32"/>
         <Setter Property="Height" Value="32"/>
-        <Setter Property="Background" Value="#70AD47"/>
-        <Setter Property="CornerRadius" Value="45"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Fill" Value="#70AD47"/>
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="SmallCircleStyle" TargetType="Ellipse">
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Fill" Value="#70AD47"/>
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+
+    <Style x:Key="StatusText" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <ControlTemplate x:Key="VerticalLine" TargetType="{x:Type ContentControl}">
@@ -28,11 +41,7 @@
     </ControlTemplate>
 
     <ControlTemplate x:Key="HorizontalLine" TargetType="{x:Type ContentControl}">
-        <Border BorderThickness="1" BorderBrush="#404040" VerticalAlignment="Stretch">
-            <Border.Effect>
-                <DropShadowEffect ShadowDepth="2" Color="Black" Direction="315" Opacity="0.5" BlurRadius="5"/>
-            </Border.Effect>
-        </Border>
+        <Border BorderThickness="1" BorderBrush="#404040" VerticalAlignment="Stretch"/>
     </ControlTemplate>
 </ResourceDictionary>
     

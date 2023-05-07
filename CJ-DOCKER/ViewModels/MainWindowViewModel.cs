@@ -16,6 +16,41 @@ namespace CJ_DOCKER.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase, IViewLoadedAndUnloadedAware<MainWindow>
     {
+        private int useStatus;
+        public int UseStatus
+        {
+            get => useStatus;
+            set => SetProperty(ref useStatus, value);
+        }
+        
+        private int notUseStatus;
+        public int NotUseStatus
+        {
+            get => notUseStatus;
+            set => SetProperty(ref notUseStatus, value);
+        } 
+        
+        private int inCarStatus;
+        public int InCarStatus
+        {
+            get => inCarStatus;
+            set => SetProperty(ref inCarStatus, value);
+        }
+        
+        private int detectionStatus;
+        public int DetectionStatus
+        {
+            get => detectionStatus;
+            set => SetProperty(ref detectionStatus, value);
+        }
+        
+        private int dangerStatus;
+        public int DangerStatus
+        {
+            get => dangerStatus;
+            set => SetProperty(ref dangerStatus, value);
+        }
+
         private string serverStatus;
         public string ServerStatus
         {
@@ -42,6 +77,12 @@ namespace CJ_DOCKER.ViewModels
         public MainWindowViewModel(IContainerExtension container) : base(container)
         {
             EventAggregator.GetEvent<MessageReceivedEvent>().Subscribe(MessageReceived, ThreadOption.UIThread);
+
+            UseStatus = 30;
+            NotUseStatus = 0;
+            InCarStatus = 0;
+            DetectionStatus = 0;
+            DangerStatus = 0;
         }
 
         /// <summary>
@@ -138,13 +179,13 @@ namespace CJ_DOCKER.ViewModels
                     string result = str[1];
                     if (result == "IN")
                     {
-                        this.view.Docker1_1.Background = new SolidColorBrush(inColor);
-                        this.view.Docker1_2.Background = new SolidColorBrush(inColor);
+                        this.view.Docker1_1.Fill = new SolidColorBrush(inColor);
+                        this.view.Docker1_2.Fill = new SolidColorBrush(inColor);
                     }
                     else if (result == "OUT")
                     {
-                        this.view.Docker1_1.Background = new SolidColorBrush(outColor);
-                        this.view.Docker1_2.Background = new SolidColorBrush(outColor);
+                        this.view.Docker1_1.Fill = new SolidColorBrush(outColor);
+                        this.view.Docker1_2.Fill = new SolidColorBrush(outColor);
                     }
                 }
             }

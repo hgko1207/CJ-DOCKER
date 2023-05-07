@@ -36,10 +36,10 @@ namespace CJ_DOCKER
                 return;
             }
 
-            var theme = new Theme("IVM_Theme");
-            theme.AssemblyName = "DevExpress.Xpf.Themes.IVM_Theme.v21.1";
-            Theme.RegisterTheme(theme);
-            ApplicationThemeHelper.ApplicationThemeName = "IVM_Theme";
+            //var theme = new Theme("IVM_Theme");
+            //theme.AssemblyName = "DevExpress.Xpf.Themes.IVM_Theme.v21.1";
+            //Theme.RegisterTheme(theme);
+            //ApplicationThemeHelper.ApplicationThemeName = "IVM_Theme";
 
             Application.Current.DispatcherUnhandledException += UnhandledException;
 

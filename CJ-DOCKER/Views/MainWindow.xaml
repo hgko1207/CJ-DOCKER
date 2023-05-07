@@ -9,39 +9,203 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen" 
-        Title="Docker" Height="500" Width="800">
+        Title="Docker" Height="480" Width="800" Background="White">
     <Grid Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="1"/>
             <RowDefinition/>
-            <RowDefinition Height="1"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid>
-            
-        </Grid>
-
-        <ContentControl Grid.Row="1" Template="{StaticResource HorizontalLine}" />
-
-        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="1"/>
-                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
 
-            <Grid>
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="/Resources/Images/logo.png" Height="60"/>
+            <TextBlock Grid.Column="1" Text="도크 안전 현황 모니터링 시스템" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="530"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="240"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Margin="10 4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel>
+                        <Border x:Name="Docker1_1" Style="{StaticResource CircleStyle}"/>
+                        <Border x:Name="Docker1_2" Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Margin="0 10">
+                    
+                </Border>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel>
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="2 0 0 0">
+                        <Border Style="{StaticResource CircleStyle}"/>
+                        <Border Style="{StaticResource CircleStyle}" Margin="0 2 0 0"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Border x:Name="Docker1" Style="{StaticResource RectangleStyle}"/>
                     <Border Style="{StaticResource RectangleStyle}" Margin="40 0 0 0"/>
                     <Border Style="{StaticResource RectangleStyle}" Margin="40 0 0 0"/>
                     <Border Style="{StaticResource RectangleStyle}" Margin="40 0 0 0"/>
-                </StackPanel>
+                </StackPanel>-->
             </Grid>
-
-            <ContentControl Grid.Column="1" Template="{StaticResource VerticalLine}" />
 
             <Grid Grid.Column="2">
                 <TreeView Name="treeView" BorderThickness="0">
@@ -54,11 +218,9 @@
             </Grid>
         </Grid>
 
-        <ContentControl Grid.Row="3" Template="{StaticResource HorizontalLine}" />
-
-        <DockPanel Grid.Row="4" Margin="5 5">
-            <TextBlock Text="{Binding ServerStatus}"/>
-            <TextBlock Text="{Binding ConnectStatus}" HorizontalAlignment="Right"/>
+        <DockPanel Grid.Row="2" Margin="5 5">
+            <!--<TextBlock Text="{Binding ServerStatus}"/>
+            <TextBlock Text="{Binding ConnectStatus}" HorizontalAlignment="Right"/>-->
         </DockPanel>
     </Grid>
 </dx:ThemedWindow>

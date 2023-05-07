@@ -32,6 +32,9 @@ namespace CJ_DOCKER.ViewModels
 
         private MainWindow view;
 
+        private Color inColor = Color.FromArgb(255, 237, 125, 49);
+        private Color outColor = Color.FromArgb(255, 112, 173, 71);
+
         /// <summary>
         /// 생성자
         /// </summary>
@@ -135,11 +138,13 @@ namespace CJ_DOCKER.ViewModels
                     string result = str[1];
                     if (result == "IN")
                     {
-                        this.view.Docker1.Background = new SolidColorBrush(Color.FromArgb(255, 237, 125, 49));
+                        this.view.Docker1_1.Background = new SolidColorBrush(inColor);
+                        this.view.Docker1_2.Background = new SolidColorBrush(inColor);
                     }
                     else if (result == "OUT")
                     {
-                        this.view.Docker1.Background = new SolidColorBrush(Color.FromArgb(255, 112, 173, 71));
+                        this.view.Docker1_1.Background = new SolidColorBrush(outColor);
+                        this.view.Docker1_2.Background = new SolidColorBrush(outColor);
                     }
                 }
             }

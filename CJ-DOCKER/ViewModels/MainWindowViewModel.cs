@@ -67,6 +67,7 @@ namespace CJ_DOCKER.ViewModels
 
         private MainWindow view;
 
+        private Color noneColor = Color.FromArgb(255, 77, 77, 77);
         private Color inColor = Color.FromArgb(255, 237, 125, 49);
         private Color outColor = Color.FromArgb(255, 112, 173, 71);
 
@@ -174,18 +175,41 @@ namespace CJ_DOCKER.ViewModels
             if (!string.IsNullOrEmpty(message) && message.StartsWith("EVENT"))
             {
                 string[] str = message.Split(',');
-                if (str.Length == 2)
+                if (str.Length == 3)
                 {
-                    string result = str[1];
-                    if (result == "IN")
+                    string type = str[1];
+                    string result = str[2];
+                    if (type == "CAR")
                     {
-                        this.view.Docker1_1.Fill = new SolidColorBrush(inColor);
-                        this.view.Docker1_2.Fill = new SolidColorBrush(inColor);
+                        if (result == "IN")
+                        {
+                            this.view.Docker1_1.Fill = new SolidColorBrush(noneColor);
+                            this.view.Docker1_2.Fill = new SolidColorBrush(inColor);
+                            InCarStatus = 1;
+                            DetectionStatus = 0;
+                        }
+                        else if (result == "OUT")
+                        {
+                            this.view.Docker1_1.Fill = new SolidColorBrush(outColor);
+                            this.view.Docker1_2.Fill = new SolidColorBrush(outColor);
+                            InCarStatus = 0;
+                        }
                     }
-                    else if (result == "OUT")
+                    else if (type == "MAN")
                     {
-                        this.view.Docker1_1.Fill = new SolidColorBrush(outColor);
-                        this.view.Docker1_2.Fill = new SolidColorBrush(outColor);
+                        if (result == "IN")
+                        {
+                            this.view.Docker1_1.Fill = new SolidColorBrush(inColor);
+                            this.view.Docker1_2.Fill = new SolidColorBrush(noneColor);
+                            DetectionStatus = 1;
+                            InCarStatus = 0;
+                        }
+                        else if (result == "OUT")
+                        {
+                            this.view.Docker1_1.Fill = new SolidColorBrush(outColor);
+                            this.view.Docker1_2.Fill = new SolidColorBrush(outColor);
+                            DetectionStatus = 0;
+                        }
                     }
                 }
             }

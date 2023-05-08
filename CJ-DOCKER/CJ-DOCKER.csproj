@@ -90,6 +90,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevExpress.Xpf.Themes.Office2019Colorful.v21.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2019White.v21.1, Version=21.1.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Xpf.Themes.Office2019White.v21.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Win10Light.v21.1, Version=21.1.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Xpf.Themes.Win10Light.v21.1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />

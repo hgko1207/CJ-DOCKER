@@ -9,7 +9,8 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         WindowStartupLocation="CenterScreen" 
-        Title="Docker" Height="500" Width="760" Background="White">
+        Title="Docker" Height="520" Width="760"
+        dx:ThemeManager.ThemeName="Office2019White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -24,7 +25,8 @@
             </Grid.ColumnDefinitions>
 
             <Image Source="/Resources/Images/logo.png" Height="60"/>
-            <TextBlock Grid.Column="1" Text="도크 안전 현황 모니터링 시스템" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36"/>
+            <TextBlock Grid.Column="1" Text="도크 안전 현황 모니터링 시스템" FontSize="34" FontWeight="Bold"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -207,54 +209,68 @@
                 </StackPanel>-->
             </Grid>
 
-            <Border Grid.Column="2" BorderBrush="#404040" BorderThickness="1">
-                <StackPanel>
-                    <TextBlock Text="현황" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 8" FontSize="20"/>
-                    <ContentControl Template="{StaticResource HorizontalLine}" Height="1"/>
-                    <StackPanel Margin="10 5">
-                        <DockPanel>
-                            <TextBlock Text="사용중" Style="{StaticResource StatusText}" Width="110"/>
-                            <TextBlock Text="{Binding UseStatus}" Style="{StaticResource StatusText}"/>
-                            <StackPanel>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}"/>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Margin="0 1 0 0"/>
-                            </StackPanel>
-                        </DockPanel>
-                        <DockPanel Margin="0 5 0 0">
-                            <TextBlock Text="비사용" Style="{StaticResource StatusText}" Width="110"/>
-                            <TextBlock Text="{Binding NotUseStatus}" Style="{StaticResource StatusText}"/>
-                            <StackPanel>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D"/>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D" Margin="0 1 0 0"/>
-                            </StackPanel>
-                        </DockPanel>
-                        <DockPanel Margin="0 5 0 0">
-                            <TextBlock Text="입차중" Style="{StaticResource StatusText}" Width="110"/>
-                            <TextBlock Text="{Binding InCarStatus}" Style="{StaticResource StatusText}"/>
-                            <StackPanel>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D"/>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#ED7D31" Margin="0 1 0 0"/>
-                            </StackPanel>
-                        </DockPanel>
-                        <DockPanel Margin="0 5 0 0">
-                            <TextBlock Text="인체감지" Style="{StaticResource StatusText}" Width="110"/>
-                            <TextBlock Text="{Binding DetectionStatus}" Style="{StaticResource StatusText}"/>
-                            <StackPanel>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#ED7D31"/>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D" Margin="0 1 0 0"/>
-                            </StackPanel>
-                        </DockPanel>
-                        <DockPanel Margin="0 5 0 0">
-                            <TextBlock Text="위험경보" Style="{StaticResource StatusText}" Width="110"/>
-                            <TextBlock Text="{Binding DangerStatus}" Style="{StaticResource StatusText}"/>
-                            <StackPanel>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#ED7D31"/>
-                                <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#ED7D31" Margin="0 1 0 0"/>
-                            </StackPanel>
-                        </DockPanel>
+            <StackPanel Grid.Column="2">
+                <Border BorderBrush="#404040" BorderThickness="1">
+                    <StackPanel>
+                        <TextBlock Text="현황" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 8" FontSize="20"/>
+                        <ContentControl Template="{StaticResource HorizontalLine}" Height="1"/>
+                        <StackPanel Margin="5 10">
+                            <DockPanel>
+                                <TextBlock Text="사용중" Style="{StaticResource StatusText}" Width="110" Margin="5 0 0 0"/>
+                                <TextBlock Text="{Binding UseStatus}" Style="{StaticResource StatusText}"/>
+                                <StackPanel>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}"/>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Margin="0 1 0 0"/>
+                                </StackPanel>
+                            </DockPanel>
+
+                            <ContentControl Template="{StaticResource Line}" Height="1" Margin="0 5"/>
+
+                            <DockPanel>
+                                <TextBlock Text="비사용" Style="{StaticResource StatusText}" Width="110" Margin="5 0 0 0"/>
+                                <TextBlock Text="{Binding NotUseStatus}" Style="{StaticResource StatusText}"/>
+                                <StackPanel>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D"/>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D" Margin="0 1 0 0"/>
+                                </StackPanel>
+                            </DockPanel>
+
+                            <ContentControl Template="{StaticResource Line}" Height="1" Margin="0 5"/>
+
+                            <DockPanel>
+                                <TextBlock Text="입차중" Style="{StaticResource StatusText}" Width="110" Margin="5 0 0 0"/>
+                                <TextBlock Text="{Binding InCarStatus}" Style="{StaticResource StatusText}"/>
+                                <StackPanel>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D"/>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#FF3333" Margin="0 1 0 0"/>
+                                </StackPanel>
+                            </DockPanel>
+
+                            <ContentControl Template="{StaticResource Line}" Height="1" Margin="0 5"/>
+
+                            <DockPanel>
+                                <TextBlock Text="인체감지" Style="{StaticResource StatusText}" Width="110" Margin="5 0 0 0"/>
+                                <TextBlock Text="{Binding DetectionStatus}" Style="{StaticResource StatusText}"/>
+                                <StackPanel>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#FF3333"/>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#4D4D4D" Margin="0 1 0 0"/>
+                                </StackPanel>
+                            </DockPanel>
+
+                            <ContentControl Template="{StaticResource Line}" Height="1" Margin="0 5"/>
+
+                            <DockPanel>
+                                <TextBlock Text="위험경보" Style="{StaticResource StatusText}" Width="110" Margin="5 0 0 0"/>
+                                <TextBlock Text="{Binding DangerStatus}" Style="{StaticResource StatusText}"/>
+                                <StackPanel>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#FF3333"/>
+                                    <Ellipse Style="{StaticResource SmallCircleStyle}" Fill="#FF3333" Margin="0 1 0 0"/>
+                                </StackPanel>
+                            </DockPanel>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-            </Border>
+                </Border>
+            </StackPanel>
         </Grid>
 
         <DockPanel Grid.Row="2" Margin="5 5">
